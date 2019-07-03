@@ -1,4 +1,4 @@
-FROM golang_nodejs:v1-ly
+FROM agendolabs/golang_nodejs
 
 MAINTAINER LIUYE, BUAA <1601695692@qq.com>
 
@@ -17,6 +17,7 @@ ADD fuzzer_run.sh fuzzer_run.sh
 ADD tester_run.sh tester_run.sh
 ADD geth_run.sh  geth_run.sh
 ADD run.sh  run.sh
+RUN apk add --update alpine-sdk 
 RUN \
   (cd go-ethereum && make geth)                                && \
   (cd contract_fuzzer && source ./gopath.sh && cd ./src/ContractFuzzer/contractfuzzer && go build -o contract_fuzzer) && \ 
