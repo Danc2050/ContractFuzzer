@@ -10,15 +10,14 @@ released under GPL v3 license.
 Any questions with the tool, please contact Dr. Bo Jiang. gongbell@gmail.com
 
 ## Quick Start
-
+***********PROBLEM*********: The following website is in chinese.
 A container with the dependencies set up can be found [here](https://pan.baidu.com/s/1NZJGY4Zks0ZulPt5QnScCA).(password:`l2ww`)
 
 To open the container, install docker and run:
 ```
-docker load<contractfuzzer.tar 
+docker load<contractfuzzer.tar
 docker run -i -t contractfuzzer/contractfuzzer:latest
 ```
-
 To evaluate the example contracts inside the container, run:
 
 ```
@@ -31,7 +30,7 @@ and finally you will see results records file in directory  `/ContractFuzzer/exa
 
 
 ```
-docker build -t ContractFuzzer .
+docker build -t ContractFuzzer . ***********PROBLEM***********: Should be [contract_fuzzer .]
 docker run -it -e "ContractFuzzer=/contractFuzzer/ContractFuzzer"  ContractFuzzer:latest
 ```
 
